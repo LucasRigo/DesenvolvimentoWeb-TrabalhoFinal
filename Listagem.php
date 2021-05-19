@@ -31,6 +31,7 @@
             echo "<b>ID:</b> " . $row_produto['id'] . "<br>";
             echo "<b>Nome:</b> " . $row_produto['nome'] . "<br>";
             echo "<b>Preco:</b> R$ " . $row_produto['preco'] . "<br>";
+            echo "<a href='EditaCad.php?id=" . $row_produto['id'] . "'>Editar</a><br>";
             
         }
         ?>
