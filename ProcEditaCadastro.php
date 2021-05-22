@@ -10,7 +10,7 @@
     mysqli_query($conecta, $result_produtos);
 
     if(mysqli_affected_rows($conecta)){
-        $_SESSION['msg'] = "<p style='color:green;'>editado com sucesso!!</p>";
+        $_SESSION['msg'] = "<p style='color:green;'>Editado com sucesso!!</p>";
         header("Location: Listagem.php");
     }else{    
         $_SESSION['msg'] = "<p style='color:red;'>Falha na edição!</p>";

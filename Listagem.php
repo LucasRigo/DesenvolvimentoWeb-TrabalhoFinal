@@ -17,6 +17,10 @@
         <div class="container">
         <h1>Listagem de Produtos</h1>
         <br>
+
+        <a href="Cadastro.php"><button>Cadastrar Produtos</button></a>
+        <br>
+
         <?php
         if(isset($_SESSION['msg'])){
             echo $_SESSION['msg'];
@@ -32,12 +36,11 @@
             echo "<b>Nome:</b> " . $row_produto['nome'] . "<br>";
             echo "<b>Preco:</b> R$ " . $row_produto['preco'] . "<br>";
             echo "<a href='EditaCad.php?id=" . $row_produto['id'] . "'>Editar</a><br>";
+            echo "<a href='ExcluiCad.php?id=" . $row_produto['id'] . "'>Excluir</a><br>";
             
         }
         ?>
 
-        <br>
-        <a href="Cadastro.php"><button>Cadastrar Produtos</button></a>
         </div>
         
     </body>
