@@ -56,7 +56,7 @@
     </div>
     <br>
     <div class="container">
-        <a href="Listagem.php"><button type="button" class="btn btn-info">Voltar para a lista</button></a>
+        <a href="Listagem.php"><button type="button" class="btn btn-info"><i class="fas fa-reply"></i>Voltar para a lista</button></a>
     </div>
 </body>
 </html>

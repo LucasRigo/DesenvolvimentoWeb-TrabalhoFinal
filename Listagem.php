@@ -58,8 +58,8 @@
             echo "</tr>";
 
             echo "<tr>";
-            echo "<td><a href='EditaCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'>Editar</button></a></td>";
-            echo "<td><a href='ExcluiCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'>Excluir</button></a></td>";
+            echo "<td><a href='EditaCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'><i class='fas fa-edit'></i>Editar</button></a></td>";
+            echo "<td><a href='ExcluiCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'><i class='fas fa-trash-alt'></i>Excluir</button></a></td>";
             echo "</tr>";
 
             echo "</table><br>";
