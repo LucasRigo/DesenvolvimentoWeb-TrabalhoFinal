@@ -24,8 +24,8 @@
 
     <div id="menu">
 		<ul>
-			<li><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-			<li><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+            <li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
+			<li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
 		</ul>
 	</div>
 
@@ -36,8 +36,8 @@
             echo $_SESSION['msg'];
             unset($_SESSION['msg']);
         }
-
         ?>
+        <br><br>
         <h2>Deseja Realmente Excluir?</h2>
         <form action="ProcExcluiCadastro.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $row_produto['id']; ?>">
@@ -47,7 +47,7 @@
     </div>
     <br>
     <div class="container">
-        <a href="Listagem.php"><button>Cancelar</button></a>
+        <a href="Listagem.php"><button type="button" class="btn btn-info">Cancelar</button></a>
     </div>
 </body>
 </html>

@@ -1,3 +1,8 @@
+body {
+  background-image: linear-gradient(to right,#D9E0E0, #9DBFCD)
+}
+
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -18,6 +23,46 @@ ul {
   
   /* Change the link color on hover */
   li a:hover {
-    background-color: rgb(47, 47, 47);
-    color: white;
+    background-color: rgb(240, 240, 240);
+    color: rgb(0, 0, 0);
+  }
+
+  .direita {
+    background-image: linear-gradient(to right, #6acaf3, #D9E0E0)
+  }
+
+  .esquerda {
+    background-image: linear-gradient(to right, #6acaf3, #D9E0E0)
+  }
+
+  h1 {
+    text-align:center;
+    font-size: 50px;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  h2 {
+    text-decoration: underline;
+    text-align: center;
+  }
+
+
+  td {
+    font-size: 25px;
+  }
+
+  label {
+    font-size: 30px;
+  }
+
+  a {
+    font-size: 25px;
+  }
+
+  .btn {
+    font-size: 25px;
   }

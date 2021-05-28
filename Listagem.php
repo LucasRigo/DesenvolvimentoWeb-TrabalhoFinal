@@ -14,13 +14,15 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/c2732b0761.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="Estilos.css">
+
+    
     </head>
     <body>
 
         <div id="menu">
 		    <ul>
-			    <li><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-			    <li><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+                <li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
+                <li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
 		    </ul>
 	    </div>
 
@@ -28,8 +30,8 @@
         <h1>Listagem de Produtos</h1>
         <br>
 
-        <a href="Cadastro.php"><button>Cadastrar Produtos</button></a>
-        <br>
+        <a href="Cadastro.php"><button type="button" class="btn btn-info">Cadastrar Produtos</button></a>
+        <br><br>
 
         <?php
         if(isset($_SESSION['msg'])){
@@ -40,14 +42,28 @@
         $resultado_lista = mysqli_query($conecta, $lista_produtos);
         
         while($row_produto = mysqli_fetch_assoc($resultado_lista)){
-            echo "<b>_____________________________________________</b>";
-            echo "<br>";
-            echo "<b>ID:</b> " . $row_produto['id'] . "<br>";
-            echo "<b>Nome:</b> " . $row_produto['nome'] . "<br>";
-            echo "<b>Preco:</b> R$ " . $row_produto['preco'] . "<br>";
-            echo "<a href='EditaCad.php?id=" . $row_produto['id'] . "'>Editar</a><br>";
-            echo "<a href='ExcluiCad.php?id=" . $row_produto['id'] . "'>Excluir</a><br>";
+  
+            echo "<table class='table table-striped table-sm'";
             
+            echo "<tr>";
+            echo "<td><b>ID:</b></td> <td>" . $row_produto['id'] . "</td>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td><b>Nome:</b> </td> <td>" . $row_produto['nome'] . "</td>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td><b>Preco:</b> </td> <td>R$ " . $row_produto['preco'] . "</td>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td><a href='EditaCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'>Editar</button></a></td>";
+            echo "<td><a href='ExcluiCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'>Excluir</button></a></td>";
+            echo "</tr>";
+
+            echo "</table><br>";
+
         }
         ?>
 

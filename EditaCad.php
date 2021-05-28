@@ -24,8 +24,8 @@
 
     <div id="menu">
 		<ul>
-			<li><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-			<li><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+			<li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
+			<li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
 		</ul>
 	</div>
 
@@ -56,7 +56,7 @@
     </div>
     <br>
     <div class="container">
-        <a href="Listagem.php"><button>Voltar para a lista</button></a>
+        <a href="Listagem.php"><button type="button" class="btn btn-info">Voltar para a lista</button></a>
     </div>
 </body>
 </html>

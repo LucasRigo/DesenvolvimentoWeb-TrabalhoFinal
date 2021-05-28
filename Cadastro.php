@@ -19,8 +19,8 @@
 
     <div id="menu">
 		<ul>
-			<li><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-			<li><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+            <li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
+			<li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
 		</ul>
 	</div>
 
@@ -40,7 +40,7 @@
             <div class="form-group">
                 <label><b>Produto:</b></label>
                 <input class="form-control" name="ProdNome" type="text" placeholder="Insira o nome do produto" required><br>
-            </div>
+         </div>
 
             <div class="form-group">
                 <label><b>Preço:</b></label>
@@ -49,10 +49,6 @@
 
             <input id="cadastra" name="cadastra" type="submit" value="CADASTRAR">
         </form>
-    </div>
-    <br>
-    <div class="container">
-        <a href="Listagem.php"><button>Listar Produtos Cadastrados</button></a>
     </div>
 </body>
 </html>
