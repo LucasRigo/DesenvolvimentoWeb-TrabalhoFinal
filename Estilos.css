@@ -66,3 +66,9 @@ ul {
   .btn {
     font-size: 25px;
   }
+
+  p {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+  }

@@ -47,7 +47,7 @@
     </div>
     <br>
     <div class="container">
-        <a href="Listagem.php"><button type="button" class="btn btn-info">Cancelar</button></a>
+        <a href="Listagem.php"><button type="button" class="btn btn-info"><i class="fas fa-times"></i>Cancelar</button></a>
     </div>
 </body>
 </html>
