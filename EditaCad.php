@@ -55,7 +55,7 @@
             <?php
                 $lista_setores = "SELECT * FROM setores";
                 $resultado_lista = mysqli_query($conecta, $lista_setores);
-                echo "<label class='setorOpt'>Escolha um setor para o produto:</label>";
+                echo "<label>Escolha um setor para o produto:</label>";
 
                 echo "<select name='Setor'>";
                 echo "<option disabled='disabled' selected='selected'>Escolha o setor</option>";

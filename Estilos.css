@@ -79,6 +79,6 @@ li a:hover {
     font-size: 20px;
   }
 
-  .setorOpt{
-    color: white;
+  a button {
+    font-size: 15px;
   }
