@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Abr-2021 às 15:46
+-- Tempo de geração: 15-Jun-2021 às 01:22
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `mercado`
 --
+CREATE DATABASE IF NOT EXISTS `mercado` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `mercado`;
 
 -- --------------------------------------------------------
 
@@ -29,14 +31,42 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `produtos` (
   `id` int(11) NOT NULL,
-  `nome` varchar(30) NOT NULL,
-  `preco` float(6) NOT NULL
+  `nome` varchar(50) NOT NULL,
+  `preco` decimal(10,2) NOT NULL,
+  `setor` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `produtos`
 --
 
+INSERT INTO `produtos` (`id`, `nome`, `preco`, `setor`) VALUES
+(1, 'Abacaxi', '3.69', 'Frutas'),
+(2, 'Melancia', '12.56', 'Frutas'),
+(3, 'Maça', '2.15', 'Frutas'),
+(4, 'Banana', '2.55', 'Frutas'),
+(9, 'Shampoo', '8.99', 'Higiene'),
+(10, 'Sabonete', '2.50', 'Higiene'),
+(11, 'Morango', '5.54', 'Frutas');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `setores`
+--
+
+CREATE TABLE `setores` (
+  `id` int(11) NOT NULL,
+  `setor` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `setores`
+--
+
+INSERT INTO `setores` (`id`, `setor`) VALUES
+(1, 'Frutas'),
+(2, 'Higiene');
 
 --
 -- Índices para tabelas despejadas
@@ -49,6 +79,12 @@ ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `setores`
+--
+ALTER TABLE `setores`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -56,7 +92,13 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de tabela `setores`
+--
+ALTER TABLE `setores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
