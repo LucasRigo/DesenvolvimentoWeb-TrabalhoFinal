@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Cadastro</title>
+    <title>Cadastro Usuário</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,8 +16,8 @@
 
     <div class="container">
         <br>
-        <h1><b>Cadastro de Produtos</b></h1>
-        <h3>Preencha os dados do produto que deseja cadastrar</h3>
+        <h1><b>Cadastro de Usuários</b></h1>
+        <h3>Preencha os dados para se cadastrar</h3>
 
         <form action="#####" method="POST">
 
