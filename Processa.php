@@ -4,6 +4,7 @@
 
     $nome = $_POST['ProdNome'];
     $preco = $_POST['ProdPreco'];
+    $setor = $_POST['Setor'];
 
     $testaNome = 0;
 
@@ -20,20 +21,22 @@
         $_SESSION['msg'] = "<p style='color:red;'>Produto já cadastrado!!</p>";
         header("Location: Cadastro.php");
     }else{
-        $result_produtos = "INSERT INTO produtos (nome, preco) VALUES ('$nome','$preco')";
-        mysqli_query($conecta, $result_produtos);
-
-        if(mysqli_insert_id($conecta)){
-            $_SESSION['msg'] = "<p style='color:green;'>Cadastrado com sucesso!!</p>";
+        if(is_null($setor)){
+            $_SESSION['msg'] = "<p style='color:red;'>Informe o setor!!</p>";
             header("Location: Cadastro.php");
         }else{
-            header("Location: Cadastro.php");
-            $_SESSION['msg'] = "<p style='color:red;'>Falha no cadastro!</p>";
+            $result_produtos = "INSERT INTO produtos (nome, preco, setor) VALUES ('$nome','$preco', '$setor')";
+            mysqli_query($conecta, $result_produtos);
+
+            if(mysqli_insert_id($conecta)){
+                $_SESSION['msg'] = "<p style='color:green;'>Cadastrado com sucesso!!</p>";
+                header("Location: Cadastro.php");
+            }else{
+                header("Location: Cadastro.php");
+                $_SESSION['msg'] = "<p style='color:red;'>Falha no cadastro!</p>";
+            }
         }
+        
     }
 
-
-
-
-    
 ?>

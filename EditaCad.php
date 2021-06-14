@@ -24,8 +24,9 @@
 
     <div id="menu">
 		<ul>
-			<li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-			<li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+			<li ><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar Produtos</a></li>
+			<li ><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+            <li ><a href="CadSetores.php"><i class="fas fa-store"></i> Cadastrar Setores</a></li>
 		</ul>
 	</div>
 
@@ -50,6 +51,20 @@
                 <label><b>Preço:</b></label>
                 <input class="form-control" name="ProdPreco" type="number" min="0" step="0.01" placeholder="Insira o preço do produto" value="<?php echo $row_produto['preco']; ?>" required><br><br>
             </div>
+
+            <?php
+                $lista_setores = "SELECT * FROM setores";
+                $resultado_lista = mysqli_query($conecta, $lista_setores);
+                echo "<label class='setorOpt'>Escolha um setor para o produto:</label>";
+
+                echo "<select name='Setor'>";
+                echo "<option disabled='disabled' selected='selected'>Escolha o setor</option>";
+                while($row_setores = mysqli_fetch_assoc($resultado_lista)){
+                    echo "<option value='" . $row_setores['setor'] . "'>". $row_setores['setor'] . "</option>";
+                }
+                echo "</select>";
+            ?>
+            <br><br>
 
             <input id="cadastra" name="cadastra" type="submit" value="EDITAR">
         </form>

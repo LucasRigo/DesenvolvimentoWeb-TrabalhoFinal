@@ -1,53 +1,59 @@
 body {
-  background-image: linear-gradient(to right,#D9E0E0, #9DBFCD)
+  background-image: url("BGmercado.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #747474;
-    border: 3px solid black;
-  }
-  
-  li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    padding: 8px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  /* Change the link color on hover */
-  li a:hover {
-    background-color: rgb(240, 240, 240);
-    color: rgb(0, 0, 0);
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
-  .direita {
-    background-image: linear-gradient(to right, #6acaf3, #D9E0E0)
-  }
+li {
+  float: left;
+}
 
-  .esquerda {
-    background-image: linear-gradient(to right, #6acaf3, #D9E0E0)
-  }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+}
+
+
 
   h1 {
     text-align:center;
     font-size: 50px;
+    color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
   }
 
   h3 {
     text-align: center;
     font-size: 25px;
+    color: #ffffff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000; 
   }
 
   h2 {
     text-decoration: underline;
     text-align: center;
+    color: red;
   }
 
 
@@ -71,4 +77,8 @@ ul {
     font-weight: bold;
     text-decoration: underline;
     font-size: 20px;
+  }
+
+  .setorOpt{
+    color: white;
   }

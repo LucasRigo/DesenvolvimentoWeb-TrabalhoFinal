@@ -15,22 +15,19 @@
         <script src="https://kit.fontawesome.com/c2732b0761.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="Estilos.css">
 
-    
     </head>
     <body>
 
         <div id="menu">
 		    <ul>
-                <li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-                <li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+                <li ><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar Produtos</a></li>
+                <li ><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+                <li ><a href="CadSetores.php"><i class="fas fa-store"></i> Cadastrar Setores</a></li>
 		    </ul>
 	    </div>
 
         <div class="container">
         <h1>Listagem de Produtos</h1>
-        <br>
-
-        <a href="Cadastro.php"><button type="button" class="btn btn-info">Cadastrar Produtos</button></a>
         <br><br>
 
         <?php
@@ -43,7 +40,7 @@
         
         while($row_produto = mysqli_fetch_assoc($resultado_lista)){
   
-            echo "<table class='table table-striped table-sm'";
+            echo "<table class='table table-dark table-striped table-sm'";
             
             echo "<tr>";
             echo "<td><b>ID:</b></td> <td>" . $row_produto['id'] . "</td>";
@@ -55,6 +52,10 @@
 
             echo "<tr>";
             echo "<td><b>Preco:</b> </td> <td>R$ " . $row_produto['preco'] . "</td>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td><b>Setor:</b> </td> <td>" . $row_produto['setor'] . "</td>";
             echo "</tr>";
 
             echo "<tr>";

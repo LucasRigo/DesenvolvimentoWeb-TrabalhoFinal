@@ -1,16 +1,11 @@
 <?php
     session_start();
-    include_once("Conexao.php");
-    $id = filter_input(INPUT_GET, 'id');
-    $result_produto = "SELECT * FROM produtos WHERE id = '$id'";
-    $resultado_produto = mysqli_query($conecta, $result_produto);
-    $row_produto = mysqli_fetch_assoc($resultado_produto);
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Editar Cadastro</title>
+    <title>Cadastro</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -31,24 +26,25 @@
 	</div>
 
     <div class="container">
-        <h1><b>Exclui Cadastro</b></h1>
+        <br>
+        <h1><b>Cadastro de Setores</b></h1>
+        <h3>Preencha os dados do setor que deseja cadastrar</h3>
         <?php
         if(isset($_SESSION['msg'])){
             echo $_SESSION['msg'];
             unset($_SESSION['msg']);
         }
-        ?>
-        <br><br>
-        <h2>Deseja Realmente Excluir?</h2>
-        <form action="ProcExcluiCadastro.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $row_produto['id']; ?>">
 
-            <input id="exclui" class="btexcluir" name="exclui" type="submit" value="Excluir">
+        ?>
+        <form action="ProcessaCadSetores.php" method="POST">
+
+            <div class="form-group">
+                <label><b>Nome do Setor:</b></label>
+                <input class="form-control" name="SetorNome" type="text" placeholder="Insira o nome do setor" required><br>
+         </div>
+
+            <input id="cadastra" name="cadastra" type="submit" value="CADASTRAR">
         </form>
-    </div>
-    <br>
-    <div class="container">
-        <a href="Listagem.php"><button type="button" class="btn btn-info"><i class="fas fa-times"></i>Cancelar</button></a>
     </div>
 </body>
 </html>
