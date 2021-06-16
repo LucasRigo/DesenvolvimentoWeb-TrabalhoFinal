@@ -19,16 +19,21 @@
         <h1><b>Cadastro de Usuários</b></h1>
         <h3>Preencha os dados para se cadastrar</h3>
 
-        <form action="#####" method="POST">
+        <form action="ProcCadUsuario.php" method="POST">
 
             <div class="form-group">
                 <label><b>Usuário:</b></label>
                 <input class="form-control" name="usuario" type="text" placeholder="Insira um nome para seu usuário" required><br>
-         </div>
+            </div>
 
             <div class="form-group">
                 <label><b>Senha:</b></label>
-                <input class="form-control" name="senha" type="password" placeholder="Insira uma senha" required><br><br>
+                <input class="form-control" name="senha" type="password" placeholder="Insira uma senha" required><br>
+            </div>
+
+            <div class="form-group">
+                <label><b>Confirme sua senha:</b></label>
+                <input class="form-control" name="confirmasenha" type="password" placeholder="Insira uma senha" required><br><br>
             </div>
 
             <input id="cadastra" name="cadastra" type="submit" value="CADASTRAR">

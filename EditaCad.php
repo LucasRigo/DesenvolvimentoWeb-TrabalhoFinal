@@ -55,7 +55,7 @@
             <?php
                 $lista_setores = "SELECT * FROM setores";
                 $resultado_lista = mysqli_query($conecta, $lista_setores);
-                echo "<label>Escolha um setor para o produto:</label>";
+                echo "<label class='seletor'>Escolha um setor para o produto:</label>";
 
                 echo "<select name='Setor'>";
                 echo "<option disabled='disabled' selected='selected'>Escolha o setor</option>";
@@ -66,7 +66,7 @@
             ?>
             <br><br>
 
-            <input id="cadastra" name="cadastra" type="submit" value="EDITAR">
+            <input class="btConfirma" id="cadastra" name="cadastra" type="submit" value="EDITAR">
         </form>
     </div>
     <br>

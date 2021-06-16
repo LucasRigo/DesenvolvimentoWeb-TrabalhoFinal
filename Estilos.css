@@ -85,7 +85,7 @@ a button {
 
 input[type=text] {
   width: 75%;
-  background-color: rgb(165, 165, 165);
+  background-color: rgb(207, 207, 207);
   border: 3px solid;
 }
 input[type=text]:focus {
@@ -94,7 +94,7 @@ input[type=text]:focus {
 
 input[type=number] {
   width: 25%;
-  background-color: rgb(165, 165, 165);
+  background-color: rgb(207, 207, 207);
   border: 3px solid
 }
 input[type=number]:focus {
@@ -103,4 +103,18 @@ input[type=number]:focus {
 
 .tamtabela {
   width: 20%;
+}
+
+.seletor {
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid;
+}
+
+.btConfirma {
+  background-color: rgb(156, 156, 156);
+  font-weight: bold;
+  border: 2px solid rgb(114, 114, 114);
+  border-radius: 7px;
 }

@@ -16,20 +16,23 @@
         }
     }
     
-        if(is_null($setor)){
-            $_SESSION['msg'] = "<p style='color:red;'>Informe o setor!!</p>";
-            header("Location: EditaCad.php?id=" . $id);
-        }else{
-            $result_produtos = "UPDATE produtos SET nome='$nome', preco='$preco', setor='$setor' WHERE id='$id'";
-            mysqli_query($conecta, $result_produtos);
+    if($testaNome > 0){
+        $_SESSION['msg'] = "<p style='color:red;'>Produto já cadastrado!!</p>";
+        header("Location: EditaCad.php?id=" . $id);
+    }elseif(is_null($setor)){
+        $_SESSION['msg'] = "<p style='color:red;'>Informe o setor!!</p>";
+        header("Location: EditaCad.php?id=" . $id);
+    }else{
+        $result_produtos = "UPDATE produtos SET nome='$nome', preco='$preco', setor='$setor' WHERE id='$id'";
+        mysqli_query($conecta, $result_produtos);
 
-            if(mysqli_affected_rows($conecta)){
-                $_SESSION['msg'] = "<p style='color:green;'>Editado com sucesso!!</p>";
-                header("Location: Listagem.php");
-            }else{    
-                $_SESSION['msg'] = "<p style='color:red;'>Falha na edição!</p>";
-                header("Location: Listagem.php");
-            }
+        if(mysqli_affected_rows($conecta)){
+            $_SESSION['msg'] = "<p style='color:green;'>Editado com sucesso!!</p>";
+            header("Location: Listagem.php");
+        }else{    
+            $_SESSION['msg'] = "<p style='color:red;'>Falha na edição!</p>";
+            header("Location: Listagem.php");
         }
+    }
     
 ?>
