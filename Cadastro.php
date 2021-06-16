@@ -64,6 +64,8 @@
 
             <input id="cadastra" name="cadastra" type="submit" value="CADASTRAR">
         </form>
+
+    
     </div>
 </body>
 </html>

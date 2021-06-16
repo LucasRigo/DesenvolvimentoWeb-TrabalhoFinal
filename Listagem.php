@@ -55,7 +55,7 @@
             echo "</tr>";
 
             echo "<tr>";
-            echo "<td><b>Setor:</b> </td> <td>" . $row_produto['setor'] . "</td>";
+            echo "<td class='tamtabela'><b>Setor:</b> </td> <td>" . $row_produto['setor'] . "</td>";
             echo "</tr>";
 
             echo "<tr>";
