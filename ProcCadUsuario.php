@@ -6,6 +6,8 @@
     $senha = $_POST['senha'];
     $confirmasenha = $_POST['confirmasenha'];
 
+    $testaNome = 0;
+
     $lista_usuarios = "SELECT * FROM usuarios";
     $resultado_lista = mysqli_query($conecta, $lista_usuarios);
         
@@ -28,8 +30,8 @@
             mysqli_query($conecta, $result_usuario);
 
         if(mysqli_affected_rows($conecta)){
-                $_SESSION['msg'] = "<p style='color:green;'>Cadastrados com sucesso!</p>";
-                header("Location: Login.php");
+                $_SESSION['msg'] = "<p style='color:green;'>Cadastrado com sucesso!</p>";
+                header("Location: CadUsuario.php");
             }else{    
                 $_SESSION['msg'] = "<p style='color:red;'>Falha no cadastro!</p>";
                 header("Location: CadUsuario.php");

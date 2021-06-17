@@ -62,7 +62,7 @@
             ?>
             <br><br>
 
-            <input class="btConfirma" id="cadastra" name="cadastra" type="submit" value="CADASTRAR">
+            <button class="btConfirma" type="submit"><i class="far fa-save"></i> Cadastrar</button>
         </form>
 
     

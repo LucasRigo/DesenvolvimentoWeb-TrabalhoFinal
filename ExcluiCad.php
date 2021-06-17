@@ -43,12 +43,12 @@
         <form action="ProcExcluiCadastro.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $row_produto['id']; ?>">
 
-            <input id="exclui" class="btexcluir" name="exclui" type="submit" value="Excluir">
+            <button class="btExclui" type="submit"><i class='fas fa-trash-alt'></i> Excluir Cadastro</button>
         </form>
     </div>
     <br>
     <div class="container">
-        <a href="Listagem.php"><button type="button" class="btn btn-info"><i class="fas fa-times"></i>Cancelar</button></a>
+        <a href="Listagem.php"><button type="button" class="btn btn-info"><i class="fas fa-times"></i> Cancelar</button></a>
     </div>
 </body>
 </html>

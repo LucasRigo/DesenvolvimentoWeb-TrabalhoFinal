@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include_once("Conexao.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,6 +24,13 @@
         <h1><b>Cadastro de Usuários</b></h1>
         <h3>Preencha os dados para se cadastrar</h3>
 
+        <?php
+        if(isset($_SESSION['msg'])){
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        }
+        ?>
+
         <form action="ProcCadUsuario.php" method="POST">
 
             <div class="form-group">
@@ -36,8 +48,11 @@
                 <input class="form-control" name="confirmasenha" type="password" placeholder="Insira uma senha" required><br><br>
             </div>
 
-            <input id="cadastra" name="cadastra" type="submit" value="CADASTRAR">
+            <input class="btConfirma" id="cadastra" name="cadastra" type="submit" value="Cadastrar-se">
         </form>
+        <br><br>
+        <p>Já possui cadastro?</p>
+        <a href="Login.php" class="usercad"><button type="button" class="btn btn-info btn-sm">Entrar agora</button></a>
     </div>
 </body>
 </html>

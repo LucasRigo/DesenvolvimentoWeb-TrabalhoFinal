@@ -43,7 +43,7 @@
                 <input class="form-control" name="SetorNome" type="text" placeholder="Insira o nome do setor" required><br>
          </div>
 
-            <input class="btConfirma" id="cadastra" name="cadastra" type="submit" value="CADASTRAR">
+            <button class="btConfirma" type="submit"><i class="far fa-save"></i> Cadastrar</button>
         </form>
     </div>
 </body>

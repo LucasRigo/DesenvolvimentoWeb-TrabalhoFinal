@@ -32,7 +32,7 @@
                 <input class="form-control" name="senha" type="password" placeholder="Insira sua senha" required><br><br>
             </div>
 
-            <input id="login" name="login" type="submit" value="Logar">
+            <button class="btConfirma" type="submit"><i class="fas fa-sign-in-alt"></i> Logar</button>
         </form>
 
         <br><br>
