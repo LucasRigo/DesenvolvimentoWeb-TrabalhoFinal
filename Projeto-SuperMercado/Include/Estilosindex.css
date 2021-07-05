@@ -1,0 +1,139 @@
+body {
+    background-image: url("fundoii.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(42, 126, 0);
+    color: white;
+    text-decoration: none;
+  }
+  td {
+    font-size: 25px;
+  }
+
+  label {
+    font-size: 30px;
+  }
+
+  a {
+    font-size: 25px;
+  }
+
+  .btn {
+    font-size: 25px;
+  }
+
+  p {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+  }
+
+  a button {
+    font-size: 15px;
+  }
+  h1 {
+    text-align:center;
+    font-size: 50px;
+    color: #0d9700;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+  }
+  h3 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(112, 112, 112);
+  }
+
+
+
+  #geral {
+    width: 950px;
+    height: auto;
+    margin: auto; 
+  }
+
+.img1 {
+  display: crn;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+#ladoalado{
+  margin-top: 100px;
+  display: flex; /* coloca as imagens uma ao lado da outra */
+  justify-content: center; /* alinha as imagens no centro da tela */
+  justify-content: space-around;
+  text-align: justify;
+}
+
+.img-container{
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid #000;
+}
+
+.img-container img{
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+.img-container:hover img{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+h5{
+  color: white;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
